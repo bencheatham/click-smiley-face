@@ -33,6 +33,7 @@ svg {
   width: 100%;
   position: absolute;
   display: block;
+  cursor: pointer;
 }
 
 .win-message-container {
@@ -45,6 +46,7 @@ svg {
 
 .win-paragraph {
   text-transform: uppercase;
+  user-select: none;
 }
 
 .spinner {
@@ -124,6 +126,7 @@ svg {
   margin-top: 10px;
   display: block;
   width: 100%;
+  user-select: none;
 
   .icon-beer {
     font-size: 40px;
