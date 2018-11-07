@@ -1,6 +1,180 @@
-/* PUT STYLES HERE */
+html, body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:"courier";
+  font-weight: 600;
+  color: #65FF00;
+  background-color: black;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#react-spa {
+  height: 100%;
+}
+
+.game-container {
+  height: 100%;
+  margin: 20px 40px;
+}
+
+.container  {
+  display: block;
+  height: calc(100% - 50px);
+  background-color: black;
+}
 
 svg {
-    width: 100px;
-    height: 100px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: block;
+}
+
+.win-message-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 25px;
+}
+
+.win-paragraph {
+  text-transform: uppercase;
+}
+
+.spinner {
+  position: absolute;
+  animation: spin 2s linear infinite;  
+  text-align: center;
+  display: block; 
+  fill: #223344; 
+  float: left; 
+  height: 150px; 
+  width: 150px;
+  position: relative;
+}
+
+#happy-face {
+  fill:'#65FF00';
+  animation: colorChange 1s infinite;
+}
+
+.x-position-changer {
+  animation: moveX 3.05s 0s infinite alternate;
+}
+
+.y-position-changer {
+  animation: moveY 3.4s linear 0s infinite alternate;
+}
+
+.game-instructions {
+  font-size: 30px;
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+
+  &:before {
+    content: 'Click the Smilely Face to Score a Point';
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__game-won {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+
+    &:hover {
+      color: blue;
+    }
+    &:before {
+      content: 'Great Job! Play Again?';
+      display: inline-block;
+      text-align: center;
+      font-size: 30px;
+      line-height: 1.2;
+      text-align: center;
+      cursor: pointer;
+    }
+    .icon-play {
+      margin-left: 10px;
+      height: 35px;
+      &:before {
+        content: '\F102';
+        display: block;
+        height: 35px;
+      }
+    }
+  }
+}
+
+.score-board {
+  font-size: 25px;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+
+  .icon-beer {
+    font-size: 40px;
+    display: inline-block;
+  }
+}
+
+@keyframes moveX {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(90%);
+  }
+}
+
+@keyframes moveY {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(400px)
+  }
+}
+
+@keyframes moveVertically {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1200px);
+  }
+}
+
+@keyframes spin { 
+  100% {
+    transform-origin: 50% 50%;  
+    transform: rotate(360deg); 
+  }
+}
+
+@keyframes colorChange {
+  0% { fill: #65FF00; }
+  10% { fill: #FF00FF	; }
+  20% { fill: #65FF00; }
+  30% { fill: #ff9900;; }
+  40% { fill: #65FF00; }
+  50% { fill: #ff9900; }
+  60% { fill: #65FF00; }
+  70% { fill: #FF00FF	; }
+  80% { fill: #65FF00; }
+  90% { fill: #ff9900; }
+  100% { fill: #65FF00; }
 }
