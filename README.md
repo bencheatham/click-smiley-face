@@ -1,5 +1,5 @@
-# zw-code-exercise
-ZW Code Exercise - React Game
+# Click Smiley Face - Code Challenge
+This game is in React. The basic premise is to click on a target to get a point. After 10 successful clicks, the player wins.
 
 ## Setup
 * Using node version 8.9.1 run `npm install`
@@ -14,11 +14,11 @@ Note: If you do this you need to run `npm run clear` before starting dev mode. W
 
 
 ## Objective
-![example](https://i.gyazo.com/0da250886a33734abb0b41f22e29c1b3.gif)
+![example](![Oct-25-2019 12-30-00](https://user-images.githubusercontent.com/9408575/67598983-c99df880-f723-11e9-93d2-cfdbb17f499c.gif))
 
-You will be making a game in React. Feel free to be creative. We have provided an SVG example and an icon, but you may use whatever you like. Click on a target to get a point. After 10 successful clicks, the player wins.
 
-### Requirements
+
+### Code Challenge Requirements
 * Fork this repo and submit a PR when done
 * No external libs
 * Put code in `/src/spas/home`
